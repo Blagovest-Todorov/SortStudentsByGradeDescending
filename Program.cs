@@ -38,7 +38,9 @@ namespace StudentsMarks
             }
 
             List<Student> sortedByGrade = new List<Student>(students.Count);
-            sortedByGrade = students.OrderByDescending(x => x.Grade).ToList();
+            sortedByGrade = students
+                .OrderByDescending(x => x.Grade)
+                .ToList();
 
             foreach  (Student student in sortedByGrade)
             {
